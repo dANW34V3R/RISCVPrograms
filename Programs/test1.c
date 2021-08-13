@@ -1,10 +1,10 @@
 #include <stdbool.h>
 
 int mult(int a, int b) {
-        return ~b;
+        return a*b;
 }
 
 int main() {
-        mult(9999999999999999, 9999999999999999999999);
+        mult(99, 99);
         mult(400, 4);
 }
