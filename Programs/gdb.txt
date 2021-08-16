@@ -1,0 +1,347 @@
+0x00000000000106ac	6	{
+1: x/i $pc
+=> 0x106ac <main+4>:	sd	ra,72(sp)
+0x00000000000106b0	6	{
+1: x/i $pc
+=> 0x106b0 <main+8>:	sd	s0,64(sp)
+0x00000000000106b4	6	{
+1: x/i $pc
+=> 0x106b4 <main+12>:	addi	s0,sp,80
+7	           char *str0 = "hello ";
+1: x/i $pc
+=> 0x106b8 <main+16>:	lui	a5,0x63
+0x00000000000106bc	7	           char *str0 = "hello ";
+1: x/i $pc
+=> 0x106bc <main+20>:	addi	a5,a5,640
+0x00000000000106c0	7	           char *str0 = "hello ";
+1: x/i $pc
+=> 0x106c0 <main+24>:	sd	a5,-24(s0)
+8	           char *str1 = "world\n";
+1: x/i $pc
+=> 0x106c4 <main+28>:	lui	a5,0x63
+0x00000000000106c8	8	           char *str1 = "world\n";
+1: x/i $pc
+=> 0x106c8 <main+32>:	addi	a5,a5,648
+0x00000000000106cc	8	           char *str1 = "world\n";
+1: x/i $pc
+=> 0x106cc <main+36>:	sd	a5,-32(s0)
+12	           iov[0].iov_base = str0;
+1: x/i $pc
+=> 0x106d0 <main+40>:	ld	a5,-24(s0)
+0x00000000000106d4	12	           iov[0].iov_base = str0;
+1: x/i $pc
+=> 0x106d4 <main+44>:	sd	a5,-72(s0)
+13	           iov[0].iov_len = strlen(str0);
+1: x/i $pc
+=> 0x106d8 <main+48>:	ld	a0,-24(s0)
+0x00000000000106dc	13	           iov[0].iov_len = strlen(str0);
+1: x/i $pc
+=> 0x106dc <main+52>:	jal	ra,0x24c20 <strlen>
+strlen (
+    str=<error reading variable: dwarf2_find_location_expression: Corrupted DWARF expression.>) at strlen.c:42
+42	strlen.c: No such file or directory.
+1: x/i $pc
+=> 0x24c20 <strlen>:	andi	a5,a0,7
+0x0000000000024c24	42	in strlen.c
+1: x/i $pc
+=> 0x24c24 <strlen+4>:	beqz	a5,0x24c4c <strlen+44>
+0x0000000000024c4c	41	in strlen.c
+1: x/i $pc
+=> 0x24c4c <strlen+44>:	mv	a5,a0
+0x0000000000024c50	80	in strlen.c
+1: x/i $pc
+=> 0x24c50 <strlen+48>:	ld	a6,-2024(gp)
+0x0000000000024c54	80	in strlen.c
+1: x/i $pc
+=> 0x24c54 <strlen+52>:	ld	a1,-2016(gp)
+103	in strlen.c
+1: x/i $pc
+=> 0x24c58 <strlen+56>:	ld	a3,0(a5)
+0x0000000000024c5c	103	in strlen.c
+1: x/i $pc
+=> 0x24c5c <strlen+60>:	mv	a2,a5
+87	in strlen.c
+1: x/i $pc
+=> 0x24c60 <strlen+64>:	addi	a5,a5,8
+80	in strlen.c
+1: x/i $pc
+=> 0x24c64 <strlen+68>:	add	a4,a3,a6
+0x0000000000024c68	80	in strlen.c
+1: x/i $pc
+=> 0x24c68 <strlen+72>:	not	a3,a3
+0x0000000000024c6c	80	in strlen.c
+1: x/i $pc
+=> 0x24c6c <strlen+76>:	and	a4,a4,a3
+0x0000000000024c70	80	in strlen.c
+1: x/i $pc
+=> 0x24c70 <strlen+80>:	and	a4,a4,a1
+0x0000000000024c74	80	in strlen.c
+1: x/i $pc
+=> 0x24c74 <strlen+84>:	beqz	a4,0x24c58 <strlen+56>
+0x0000000000024c78	87	in strlen.c
+1: x/i $pc
+=> 0x24c78 <strlen+88>:	lbu	a4,-8(a5)
+0x0000000000024c7c	87	in strlen.c
+1: x/i $pc
+=> 0x24c7c <strlen+92>:	beqz	a4,0x24cc4 <strlen+164>
+0x0000000000024c80	89	in strlen.c
+1: x/i $pc
+=> 0x24c80 <strlen+96>:	lbu	a4,-7(a5)
+0x0000000000024c84	89	in strlen.c
+1: x/i $pc
+=> 0x24c84 <strlen+100>:	beqz	a4,0x24ccc <strlen+172>
+0x0000000000024c88	91	in strlen.c
+1: x/i $pc
+=> 0x24c88 <strlen+104>:	lbu	a4,-6(a5)
+0x0000000000024c8c	91	in strlen.c
+1: x/i $pc
+=> 0x24c8c <strlen+108>:	beqz	a4,0x24cd8 <strlen+184>
+0x0000000000024c90	93	in strlen.c
+1: x/i $pc
+=> 0x24c90 <strlen+112>:	lbu	a4,-5(a5)
+0x0000000000024c94	93	in strlen.c
+1: x/i $pc
+=> 0x24c94 <strlen+116>:	beqz	a4,0x24ce4 <strlen+196>
+0x0000000000024c98	97	in strlen.c
+1: x/i $pc
+=> 0x24c98 <strlen+120>:	lbu	a4,-4(a5)
+0x0000000000024c9c	97	in strlen.c
+1: x/i $pc
+=> 0x24c9c <strlen+124>:	beqz	a4,0x24cf0 <strlen+208>
+0x0000000000024ca0	99	in strlen.c
+1: x/i $pc
+=> 0x24ca0 <strlen+128>:	lbu	a4,-3(a5)
+0x0000000000024ca4	99	in strlen.c
+1: x/i $pc
+=> 0x24ca4 <strlen+132>:	beqz	a4,0x24cfc <strlen+220>
+0x0000000000024ca8	101	in strlen.c
+1: x/i $pc
+=> 0x24ca8 <strlen+136>:	lbu	a4,-2(a5)
+0x0000000000024cac	101	in strlen.c
+1: x/i $pc
+=> 0x24cac <strlen+140>:	beqz	a4,0x24d08 <strlen+232>
+102	in strlen.c
+1: x/i $pc
+=> 0x24d08 <strlen+232>:	sub	a2,a2,a0
+0x0000000000024d0c	102	in strlen.c
+1: x/i $pc
+=> 0x24d0c <strlen+236>:	addi	a0,a2,6
+0x0000000000024d10	102	in strlen.c
+1: x/i $pc
+=> 0x24d10 <strlen+240>:	ret
+0x00000000000106e0 in main () at writevSyscall.c:13
+13	           iov[0].iov_len = strlen(str0);
+1: x/i $pc
+=> 0x106e0 <main+56>:	mv	a5,a0
+13	           iov[0].iov_len = strlen(str0);
+1: x/i $pc
+=> 0x106e4 <main+60>:	sd	a5,-64(s0)
+14	           iov[1].iov_base = str1;
+1: x/i $pc
+=> 0x106e8 <main+64>:	ld	a5,-32(s0)
+0x00000000000106ec	14	           iov[1].iov_base = str1;
+1: x/i $pc
+=> 0x106ec <main+68>:	sd	a5,-56(s0)
+15	           iov[1].iov_len = strlen(str1);
+1: x/i $pc
+=> 0x106f0 <main+72>:	ld	a0,-32(s0)
+0x00000000000106f4	15	           iov[1].iov_len = strlen(str1);
+1: x/i $pc
+=> 0x106f4 <main+76>:	jal	ra,0x24c20 <strlen>
+strlen (
+    str=<error reading variable: dwarf2_find_location_expression: Corrupted DWARF expression.>) at strlen.c:42
+42	strlen.c: No such file or directory.
+1: x/i $pc
+=> 0x24c20 <strlen>:	andi	a5,a0,7
+0x0000000000024c24	42	in strlen.c
+1: x/i $pc
+=> 0x24c24 <strlen+4>:	beqz	a5,0x24c4c <strlen+44>
+0x0000000000024c4c	41	in strlen.c
+1: x/i $pc
+=> 0x24c4c <strlen+44>:	mv	a5,a0
+0x0000000000024c50	80	in strlen.c
+1: x/i $pc
+=> 0x24c50 <strlen+48>:	ld	a6,-2024(gp)
+0x0000000000024c54	80	in strlen.c
+1: x/i $pc
+=> 0x24c54 <strlen+52>:	ld	a1,-2016(gp)
+103	in strlen.c
+1: x/i $pc
+=> 0x24c58 <strlen+56>:	ld	a3,0(a5)
+0x0000000000024c5c	103	in strlen.c
+1: x/i $pc
+=> 0x24c5c <strlen+60>:	mv	a2,a5
+87	in strlen.c
+1: x/i $pc
+=> 0x24c60 <strlen+64>:	addi	a5,a5,8
+80	in strlen.c
+1: x/i $pc
+=> 0x24c64 <strlen+68>:	add	a4,a3,a6
+0x0000000000024c68	80	in strlen.c
+1: x/i $pc
+=> 0x24c68 <strlen+72>:	not	a3,a3
+0x0000000000024c6c	80	in strlen.c
+1: x/i $pc
+=> 0x24c6c <strlen+76>:	and	a4,a4,a3
+0x0000000000024c70	80	in strlen.c
+1: x/i $pc
+=> 0x24c70 <strlen+80>:	and	a4,a4,a1
+0x0000000000024c74	80	in strlen.c
+1: x/i $pc
+=> 0x24c74 <strlen+84>:	beqz	a4,0x24c58 <strlen+56>
+0x0000000000024c78	87	in strlen.c
+1: x/i $pc
+=> 0x24c78 <strlen+88>:	lbu	a4,-8(a5)
+0x0000000000024c7c	87	in strlen.c
+1: x/i $pc
+=> 0x24c7c <strlen+92>:	beqz	a4,0x24cc4 <strlen+164>
+0x0000000000024c80	89	in strlen.c
+1: x/i $pc
+=> 0x24c80 <strlen+96>:	lbu	a4,-7(a5)
+0x0000000000024c84	89	in strlen.c
+1: x/i $pc
+=> 0x24c84 <strlen+100>:	beqz	a4,0x24ccc <strlen+172>
+0x0000000000024c88	91	in strlen.c
+1: x/i $pc
+=> 0x24c88 <strlen+104>:	lbu	a4,-6(a5)
+0x0000000000024c8c	91	in strlen.c
+1: x/i $pc
+=> 0x24c8c <strlen+108>:	beqz	a4,0x24cd8 <strlen+184>
+0x0000000000024c90	93	in strlen.c
+1: x/i $pc
+=> 0x24c90 <strlen+112>:	lbu	a4,-5(a5)
+0x0000000000024c94	93	in strlen.c
+1: x/i $pc
+=> 0x24c94 <strlen+116>:	beqz	a4,0x24ce4 <strlen+196>
+0x0000000000024c98	97	in strlen.c
+1: x/i $pc
+=> 0x24c98 <strlen+120>:	lbu	a4,-4(a5)
+0x0000000000024c9c	97	in strlen.c
+1: x/i $pc
+=> 0x24c9c <strlen+124>:	beqz	a4,0x24cf0 <strlen+208>
+0x0000000000024ca0	99	in strlen.c
+1: x/i $pc
+=> 0x24ca0 <strlen+128>:	lbu	a4,-3(a5)
+0x0000000000024ca4	99	in strlen.c
+1: x/i $pc
+=> 0x24ca4 <strlen+132>:	beqz	a4,0x24cfc <strlen+220>
+0x0000000000024ca8	101	in strlen.c
+1: x/i $pc
+=> 0x24ca8 <strlen+136>:	lbu	a4,-2(a5)
+0x0000000000024cac	101	in strlen.c
+1: x/i $pc
+=> 0x24cac <strlen+140>:	beqz	a4,0x24d08 <strlen+232>
+102	in strlen.c
+1: x/i $pc
+=> 0x24d08 <strlen+232>:	sub	a2,a2,a0
+0x0000000000024d0c	102	in strlen.c
+1: x/i $pc
+=> 0x24d0c <strlen+236>:	addi	a0,a2,6
+0x0000000000024d10	102	in strlen.c
+1: x/i $pc
+=> 0x24d10 <strlen+240>:	ret
+0x00000000000106f8 in main () at writevSyscall.c:15
+15	           iov[1].iov_len = strlen(str1);
+1: x/i $pc
+=> 0x106f8 <main+80>:	mv	a5,a0
+15	           iov[1].iov_len = strlen(str1);
+1: x/i $pc
+=> 0x106fc <main+84>:	sd	a5,-48(s0)
+17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x10700 <main+88>:	addi	a5,s0,-72
+0x0000000000010704	17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x10704 <main+92>:	li	a2,2
+0x0000000000010708	17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x10708 <main+96>:	mv	a1,a5
+0x000000000001070c	17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x1070c <main+100>:	li	a0,1
+0x0000000000010710	17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x10710 <main+104>:	jal	ra,0x27fac <__writev>
+__writev (
+    fd=<error reading variable: dwarf2_find_location_expression: Corrupted DWARF expression.>, 
+    iov=<error reading variable: dwarf2_find_location_expression: Corrupted DWARF expression.>, 
+    iovcnt=<error reading variable: dwarf2_find_location_expression: Corrupted DWARF expression.>) at ../sysdeps/unix/sysv/linux/writev.c:25
+25	../sysdeps/unix/sysv/linux/writev.c: No such file or directory.
+1: x/i $pc
+=> 0x27fac <__writev>:	lw	a5,-1952(tp) # 0xfffffffffffff860
+26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fb0 <__writev+4>:	addi	sp,sp,-32
+0x0000000000027fb4	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fb4 <__writev+8>:	sd	ra,24(sp)
+0x0000000000027fb8	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fb8 <__writev+12>:	sd	s0,16(sp)
+0x0000000000027fbc	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fbc <__writev+16>:	sd	s1,8(sp)
+0x0000000000027fc0	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fc0 <__writev+20>:	sd	s2,0(sp)
+0x0000000000027fc4	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fc4 <__writev+24>:	bnez	a5,0x27ff8 <__writev+76>
+0x0000000000027fc8	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fc8 <__writev+28>:	li	a7,66
+0x0000000000027fcc	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fcc <__writev+32>:	ecall
+0x0000000000027fd0	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fd0 <__writev+36>:	lui	a5,0xfffff
+0x0000000000027fd4	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fd4 <__writev+40>:	mv	s0,a0
+0x0000000000027fd8	26	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fd8 <__writev+44>:	bltu	a5,a0,0x28050 <__writev+164>
+0x0000000000027fdc	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fdc <__writev+48>:	ld	ra,24(sp)
+0x0000000000027fe0	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fe0 <__writev+52>:	mv	a0,s0
+0x0000000000027fe4	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fe4 <__writev+56>:	ld	s0,16(sp)
+0x0000000000027fe8	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fe8 <__writev+60>:	ld	s1,8(sp)
+0x0000000000027fec	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27fec <__writev+64>:	ld	s2,0(sp)
+0x0000000000027ff0	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27ff0 <__writev+68>:	addi	sp,sp,32
+0x0000000000027ff4	27	in ../sysdeps/unix/sysv/linux/writev.c
+1: x/i $pc
+=> 0x27ff4 <__writev+72>:	ret
+0x0000000000010714 in main () at writevSyscall.c:17
+17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x10714 <main+108>:	sd	a0,-40(s0)
+0x0000000000010718	17	           nwritten = writev(STDOUT_FILENO, iov, 2);
+1: x/i $pc
+=> 0x10718 <main+112>:	li	a5,0
+18	}
+1: x/i $pc
+=> 0x1071c <main+116>:	mv	a0,a5
+0x0000000000010720	18	}
+1: x/i $pc
+=> 0x10720 <main+120>:	ld	ra,72(sp)
+0x0000000000010724	18	}
+1: x/i $pc
+=> 0x10724 <main+124>:	ld	s0,64(sp)
+0x0000000000010728	18	}
+1: x/i $pc
+=> 0x10728 <main+128>:	addi	sp,sp,80
+0x000000000001072c	18	}
+1: x/i $pc
+=> 0x1072c <main+132>:	ret
