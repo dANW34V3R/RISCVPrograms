@@ -1,0 +1,118 @@
+execve("./riscvbude", ["./riscvbude", "-n", "1", "-i", "1"], 0x3fffdabb50 /* 25 vars */) = 0
+brk(NULL)                               = 0x2de15000
+brk(0x2de15bb8)                         = 0x2de15bb8
+uname({sysname="Linux", nodename="fedora-riscv", ...}) = 0
+set_tid_address(0x2de150d0)             = 602
+set_robust_list(0x2de150e0, 24)         = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x368c0, sa_mask=[], sa_flags=SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x36970, sa_mask=[], sa_flags=SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+readlinkat(AT_FDCWD, "/proc/self/exe", "/home/riscv/RISCVPrograms/riscvb"..., 4096) = 35
+brk(0x2de36bb8)                         = 0x2de36bb8
+brk(0x2de37000)                         = 0x2de37000
+mprotect(0xcb000, 4096, PROT_READ)      = 0
+openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=0, ...}, AT_EMPTY_PATH) = 0
+getdents64(3, 0x2de16450 /* 14 entries */, 32768) = 416
+getdents64(3, 0x2de16450 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+sched_getaffinity(602, 8, [0, 1])       = 8
+openat(AT_FDCWD, "/home/riscv/RISCVPrograms/miniBUDE/data/bm1/ligand.in", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=416, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=416, ...}, AT_EMPTY_PATH) = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "N\321!?\32Q\310@/n\363?\0\0\0\0\5\305\357>\37\364\270@h\263\352>\0\0\0\0"..., 416) = 416
+lseek(3, 416, SEEK_SET)                 = 416
+close(3)                                = 0
+openat(AT_FDCWD, "/home/riscv/RISCVPrograms/miniBUDE/data/bm1/protein.in", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=15008, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=15008, ...}, AT_EMPTY_PATH) = 0
+lseek(3, 12288, SEEK_SET)               = 12288
+read(3, "\356|!A\254\34z\27733c\301\1\0\0\0\260r*A\0\0\300\276\372~T\301\20\0\0\0"..., 2720) = 2720
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "1\10\304@m\347\221A\211A\214\300\6\0\0\0\274t\257@\240\32\211A\203\300j\300\0\0\0\0"..., 12288) = 12288
+read(3, "\356|!A\254\34z\27733c\301\1\0\0\0\260r*A\0\0\300\276\372~T\301\20\0\0\0"..., 4096) = 2720
+close(3)                                = 0
+openat(AT_FDCWD, "/home/riscv/RISCVPrograms/miniBUDE/data/bm1/forcefield.in", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=544, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=544, ...}, AT_EMPTY_PATH) = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "-\0\0\0\217\302\265?\263{\362\276\0\0\0\0-\0\0\0\217\302\265?>\350I\277\0\0\0\0"..., 544) = 544
+lseek(3, 544, SEEK_SET)                 = 544
+close(3)                                = 0
+openat(AT_FDCWD, "/home/riscv/RISCVPrograms/miniBUDE/data/bm1/poses.in", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=1572864, ...}, AT_EMPTY_PATH) = 0
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=1572864, ...}, AT_EMPTY_PATH) = 0
+lseek(3, 1572864, SEEK_SET)             = 1572864
+lseek(3, 0, SEEK_SET)                   = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "\221\n\6\300\n\276\365\277P\344=@\n\276\365?\371f_\277\221\n\6\300\307\270\262\276\307\2702>"..., 4096) = 4096
+lseek(3, 262144, SEEK_SET)              = 262144
+read(3, "\307\2702\277\371f_\277\307\2702\277\330\17\311\277\n\276\365\277\361f\337?\221\n\6\300\371f_?"..., 4096) = 4096
+lseek(3, 524288, SEEK_SET)              = 524288
+read(3, "\307\270\262\276\n\276\365\277\307\270\262>\303\2702\300\307\2702?\0366\21\300\330\17\311\277\307\270\262>"..., 4096) = 4096
+lseek(3, 786432, SEEK_SET)              = 786432
+read(3, "\0\0\300@\0\0\300\300\0\0\200\300\0\0\340@\0\0\0@\0\0\300@\0\0\0@\0\0@\300"..., 4096) = 4096
+lseek(3, 1048576, SEEK_SET)             = 1048576
+read(3, "\0\0@@\0\0\0\300\0\0\300@\0\0\300@\0\0\0@\0\0\200@\0\0\0\0\0\0\0@"..., 4096) = 4096
+lseek(3, 1310720, SEEK_SET)             = 1310720
+read(3, "\0\0\200\300\0\0\200@\0\0\300@\0\0\200@\0\0\0@\0\0\0\0\0\0\200\277\0\0\0\0"..., 4096) = 4096
+lseek(3, 0, SEEK_SET)                   = 0
+close(3)                                = 0
+newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=4368, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x3fe420a000
+mprotect(0x3fe420b000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x3fe4a09cb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[603], tls=0x3fe4a0abf0, child_tidptr=0x3fe4a0a520) = 603
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 1
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 1
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 1
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+clock_gettime(CLOCK_REALTIME, {tv_sec=1644838393, tv_nsec=212763977}) = 0
+futex(0x2de1f4b4, FUTEX_WAKE_PRIVATE, 2147483647) = 1
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2de1f5c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+clock_gettime(CLOCK_REALTIME, {tv_sec=1644838393, tv_nsec=218093884}) = 0
+openat(AT_FDCWD, "/home/riscv/RISCVPrograms/miniBUDE/data/bm1/ref_energies.out", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0664, st_size=726433, ...}, AT_EMPTY_PATH) = 0
+read(3, "865.522827\n25.071529\n368.433502\n"..., 4096) = 4096
+close(3)                                = 0
+write(1, "\nPoses     : 1\nIterations: 1\nLig"..., 313
+Poses     : 1
+Iterations: 1
+Ligands   : 26
+Proteins  : 938
+Deck      : /home/riscv/RISCVPrograms/miniBUDE/data/bm1
+
+Running C/OpenMP
+- Total time:       5.330 ms
+- Average time:     5.330 ms
+- Interactions/s:   0.005 billion
+- GFLOP/s:          0.000
+- GFInst/s:         0.114
+
+Largest difference was 100.000%.
+
+) = 313
+exit_group(0)                           = ?
++++ exited with 0 +++
